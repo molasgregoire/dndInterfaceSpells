@@ -76,58 +76,59 @@ if(fiche):
 
 
 #%%
-st.write( '### Filtres')
+
+# st.write( '### Filtres')
 
 # spell levels
-st.write( '##### niveau(x) des sorts')
-c0,c1,c2,c3,c4,c5,c6,c7,c8,c9=st.columns(10)
-with c0:st.checkbox(label='Cantrips',value=True,key='Niveau Cantrips')
-with c1:st.checkbox(label='Niveau 1',value=True,key='Niveau 1')
-with c2:st.checkbox(label='Niveau 2',value=True,key='Niveau 2')
-with c3:st.checkbox(label='Niveau 3',value=True,key='Niveau 3')
-with c4:st.checkbox(label='Niveau 4',value=True,key='Niveau 4')
-with c5:st.checkbox(label='Niveau 5',value=True,key='Niveau 5')
-with c6:st.checkbox(label='Niveau 6',value=True,key='Niveau 6')
-with c7:st.checkbox(label='Niveau 7',value=True,key='Niveau 7')
-with c8:st.checkbox(label='Niveau 8',value=True,key='Niveau 8')
-with c9:st.checkbox(label='Niveau 9',value=True,key='Niveau 9')
+# st.write( '##### niveau(x) des sorts')
+# c0,c1,c2,c3,c4,c5,c6,c7,c8,c9=st.columns(10)
+# with c0:st.checkbox(label='Cantrips',value=True,key='Niveau Cantrips')
+# with c1:st.checkbox(label='Niveau 1',value=True,key='Niveau 1')
+# with c2:st.checkbox(label='Niveau 2',value=True,key='Niveau 2')
+# with c3:st.checkbox(label='Niveau 3',value=True,key='Niveau 3')
+# with c4:st.checkbox(label='Niveau 4',value=True,key='Niveau 4')
+# with c5:st.checkbox(label='Niveau 5',value=True,key='Niveau 5')
+# with c6:st.checkbox(label='Niveau 6',value=True,key='Niveau 6')
+# with c7:st.checkbox(label='Niveau 7',value=True,key='Niveau 7')
+# with c8:st.checkbox(label='Niveau 8',value=True,key='Niveau 8')
+# with c9:st.checkbox(label='Niveau 9',value=True,key='Niveau 9')
 
-if 'filterLvl' not in st.session_state:
-    st.session_state['filterLvl'] = [  ]
+# if 'filterLvl' not in st.session_state:
+#     st.session_state['filterLvl'] = [  ]
 # st.write( [ key for key in st.session_state if st.session_state[key] is True and 'Niveau' in key  ] )
 #%%
 
-st.write( '##### classe(s) des sorts')
-c0,c1,c2,c3=st.columns(4)
+# st.write( '##### classe(s) des sorts')
+# c0,c1,c2,c3=st.columns(4)
 
-with c0:st.checkbox(label='Druide | Druid',value=True)
-with c0:st.checkbox(label='Ensorceleur/euse | Sorcerer',value=True)
-with c1:st.checkbox(label='Clerc(esse)| Cleric',value=True)
-with c1:st.checkbox(label='Rodeur/euse | Ranger',value=True)
-with c2:st.checkbox(label='Soricer(e) | Warlock',value=True)
-with c2:st.checkbox(label='Barde | Bard',value=True)
-with c3:st.checkbox(label='Paladin',value=True)
-with c3:st.checkbox(label='Magicien(ne) | Wizard',value=True)
+# with c0:st.checkbox(label='Druide | Druid',value=True)
+# with c0:st.checkbox(label='Ensorceleur/euse | Sorcerer',value=True)
+# with c1:st.checkbox(label='Clerc(esse)| Cleric',value=True)
+# with c1:st.checkbox(label='Rodeur/euse | Ranger',value=True)
+# with c2:st.checkbox(label='Soricer(e) | Warlock',value=True)
+# with c2:st.checkbox(label='Barde | Bard',value=True)
+# with c3:st.checkbox(label='Paladin',value=True)
+# with c3:st.checkbox(label='Magicien(ne) | Wizard',value=True)
 
-st.write( '##### Ecole(s) des sorts')
-c0,c1,c2,c3=st.columns(4)
+# st.write( '##### Ecole(s) des sorts')
+# c0,c1,c2,c3=st.columns(4)
 
-with c0:st.checkbox(label='Conjuration',value=True)
-with c0:st.checkbox(label='Abjuration',value=True)
-with c1:st.checkbox(label='Enchantment',value=True)
-with c1:st.checkbox(label='Evocation',value=True)
-with c2:st.checkbox(label='Necromancy',value=True)
-with c2:st.checkbox(label='Illusion',value=True)
-with c3:st.checkbox(label='Divination',value=True)
-with c3:st.checkbox(label='Transmutation',value=True)
+# with c0:st.checkbox(label='Conjuration',value=True)
+# with c0:st.checkbox(label='Abjuration',value=True)
+# with c1:st.checkbox(label='Enchantment',value=True)
+# with c1:st.checkbox(label='Evocation',value=True)
+# with c2:st.checkbox(label='Necromancy',value=True)
+# with c2:st.checkbox(label='Illusion',value=True)
+# with c3:st.checkbox(label='Divination',value=True)
+# with c3:st.checkbox(label='Transmutation',value=True)
 
-# Concentraion + V / S / M
-st.write( '##### Concentraion / Vocal / Somatique / Materiel')
-c0,c1,c2,c3=st.columns(4)
-with c0:st.checkbox(label='Concentraion',value=True)
-with c1:st.checkbox(label='Vocal',value=True)
-with c2:st.checkbox(label='Somatique',value=True)
-with c3:st.checkbox(label='Materiel',value=True)
+# # Concentraion + V / S / M
+# st.write( '##### Concentraion / Vocal / Somatique / Materiel')
+# c0,c1,c2,c3=st.columns(4)
+# with c0:st.checkbox(label='Concentraion',value=True)
+# with c1:st.checkbox(label='Vocal',value=True)
+# with c2:st.checkbox(label='Somatique',value=True)
+# with c3:st.checkbox(label='Materiel',value=True)
 
 # ['conjuration', 'abjuration', 'enchantment', 'evocation',
 #        'necromancy', 'illusion', 'divination', 'transmutation']
@@ -135,7 +136,10 @@ with c3:st.checkbox(label='Materiel',value=True)
 if 'spellList' not in st.session_state:
     st.session_state['spellList'] = []
 
-st.session_state['spellList'] = [f"{s1} | {s2}" for s1, s2 in zip( list(dfSpell['namesFR']), list(dfSpell['name']))]
+# st.session_state['spellList'] = [f"{s1} | {s2}" for s1, s2 in zip( list(dfSpell['namesFR']), list(dfSpell['name']))]
+
+st.session_state['spellList'] = [f"{s1} | {s2} | niv. {s3} | classes : "+','.join(eval(s4)) + ' | ecole : ' + s5 + ' | comp. : '+ s6 + ' | dur. : ' + s7  for s1, s2, s3, s4, s5, s6, s7  in zip( list(dfSpell['namesFR']), list(dfSpell['name']), list(dfSpell['level']), list(dfSpell['classes']), list(dfSpell['school']), list(dfSpell['components.raw']), list(dfSpell['duration']),   )]
+
 
 # st.write('### Selectionnez vos sorts ici !')
 # st.write( st.session_state['spellList'])
@@ -146,17 +150,18 @@ st.multiselect( label = '### Selectionnez vos sorts ici !' , options = st.sessio
 #%%
 if 'validation' not in st.session_state:
     st.session_state['validation'] = False
-if( fiche and len(st.session_state['spellSelection']) > 0 ):
-    st.session_state['validation'] = st.button('Faire la fiche')
+# if(  ):
+    
+st.session_state['validation'] = st.button('Faire la fiche', disabled= not ( fiche and len(st.session_state['spellSelection']) > 0 ))
 
 #%% insertion et telechargemnt ici
 
 if(st.session_state['validation']):
-    st.write('cest validé')
+    # st.write('cest validé')
 
-    spellEng = [ i.split('|')[1][1:] for i in st.session_state['spellSelection'] ]
+    spellEng = [ i.split('|')[1][1:-1] for i in st.session_state['spellSelection'] ]
     
-    st.write(spellEng)
+    # st.write(spellEng)
     
     for s in spellEng:
         st.session_state['dfJson'] = ajoutSpellDf( st.session_state['dfJson'], s )
@@ -175,13 +180,30 @@ if(st.session_state['validation']):
     )
 
     st.write('finito')
-#%%
+#%% affichage des sort selectionner
 
+def displaySpell( spellName ):
+    row = dfSpell[dfSpell['name'] == spellName].iloc[0]
+    
+    st.write( '### '+spellName)
+    st.write( row['school'] + ' de niveau ' + row['level'] )
+    st.write( '**Casting Time** : ' + row['casting_time']  )
+    st.write( '**Range** : ' + row['range']  )
+    st.write( '**Components** : ' + row['components.raw']  )
+    st.write( '**Duration** : ' + row['duration']  )
+    
+    st.write( row['descrisFR'] )
+    st.write( 'A plus haut niveau : ' + row['descrisHLFR'] )
+    
+    st.write( '**classes** : ' + ','.join(eval(row['classes'])) )
+    
+    
+    
+spellEng = [ i.split('|')[1][1:-1] for i in st.session_state['spellSelection'] ]
 
-
-
-
-
+for s in spellEng:
+    
+    displaySpell(s)
 
 
 
