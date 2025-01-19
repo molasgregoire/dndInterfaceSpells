@@ -81,16 +81,21 @@ st.write( '### Filtres')
 # spell levels
 st.write( '##### niveau(x) des sorts')
 c0,c1,c2,c3,c4,c5,c6,c7,c8,c9=st.columns(10)
-with c0:st.checkbox(label='Cantrips',value=True)
-with c1:st.checkbox(label='Niveau 1',value=True)
-with c2:st.checkbox(label='Niveau 2',value=True)
-with c3:st.checkbox(label='Niveau 3',value=True)
-with c4:st.checkbox(label='Niveau 4',value=True)
-with c5:st.checkbox(label='Niveau 5',value=True)
-with c6:st.checkbox(label='Niveau 6',value=True)
-with c7:st.checkbox(label='Niveau 7',value=True)
-with c8:st.checkbox(label='Niveau 8',value=True)
-with c9:st.checkbox(label='Niveau 9',value=True)
+with c0:st.checkbox(label='Cantrips',value=True,key='Niveau Cantrips')
+with c1:st.checkbox(label='Niveau 1',value=True,key='Niveau 1')
+with c2:st.checkbox(label='Niveau 2',value=True,key='Niveau 2')
+with c3:st.checkbox(label='Niveau 3',value=True,key='Niveau 3')
+with c4:st.checkbox(label='Niveau 4',value=True,key='Niveau 4')
+with c5:st.checkbox(label='Niveau 5',value=True,key='Niveau 5')
+with c6:st.checkbox(label='Niveau 6',value=True,key='Niveau 6')
+with c7:st.checkbox(label='Niveau 7',value=True,key='Niveau 7')
+with c8:st.checkbox(label='Niveau 8',value=True,key='Niveau 8')
+with c9:st.checkbox(label='Niveau 9',value=True,key='Niveau 9')
+
+if 'filterLvl' not in st.session_state:
+    st.session_state['filterLvl'] = [  ]
+# st.write( [ key for key in st.session_state if st.session_state[key] is True and 'Niveau' in key  ] )
+#%%
 
 st.write( '##### classe(s) des sorts')
 c0,c1,c2,c3=st.columns(4)
@@ -137,20 +142,16 @@ st.session_state['spellList'] = [f"{s1} | {s2}" for s1, s2 in zip( list(dfSpell[
 
 st.multiselect( label = '### Selectionnez vos sorts ici !' , options = st.session_state['spellList'], key = 'spellSelection' )
 
-#%%
-
-st.write( st.session_state['spellSelection'] )
-
-st.write(fiche.name)
 
 #%%
-
+if 'validation' not in st.session_state:
+    st.session_state['validation'] = False
 if( fiche and len(st.session_state['spellSelection']) > 0 ):
-    validation = st.button('Faire la fiche')
+    st.session_state['validation'] = st.button('Faire la fiche')
 
 #%% insertion et telechargemnt ici
 
-if(validation):
+if(st.session_state['validation']):
     st.write('cest validé')
 
     spellEng = [ i.split('|')[1][1:] for i in st.session_state['spellSelection'] ]
