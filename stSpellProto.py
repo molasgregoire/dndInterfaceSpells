@@ -185,7 +185,7 @@ if(st.session_state['validation']):
 def displaySpell( spellName ):
     row = dfSpell[dfSpell['name'] == spellName].iloc[0]
     
-    st.write( '### '+spellName)
+    st.write( '### '+ row['namesFR'] +' | ' + spellName )
     st.write( row['school'] + ' de niveau ' + row['level'] )
     st.write( '**Casting Time** : ' + row['casting_time']  )
     st.write( '**Range** : ' + row['range']  )
